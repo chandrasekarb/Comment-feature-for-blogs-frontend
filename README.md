@@ -1,3 +1,4 @@
+# Comment-feature-for-blogs-frontend
 
 In the project involves building a comments feature for a blog system. Task has to be done with React Js, Node JS and Apache Solr DB.
 
