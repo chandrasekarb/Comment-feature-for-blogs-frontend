@@ -1,0 +1,96 @@
+.comment-page {
+//    width: 700px;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    
+ 
+  .comment {
+    position: relative;
+    margin: 10px auto;
+    
+    
+    .comment-heading {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      font-size: 14px;
+    
+      .comment-info {
+        color: #565656;
+        margin-left: 10px;
+      }
+    
+      .imgIcon {
+        height: 35px;
+        max-height: 35px;
+        width: 35px;
+        max-width: 35px;
+        border-radius: 100%;
+      }
+  
+      .date {
+        margin: 0;
+      }
+  
+    }
+    
+    .comment-body {
+      padding: 0 20px;
+      padding-left: 28px;
+      border-left: 2px solid #c7c7c7;
+      
+      .replyButton{
+        width: 60px;
+        font-size: 12px;
+      }
+      
+      .deleteButton{
+        width: 60px;
+        margin-left: 15px;
+        background-color: transparent;
+        font-size: 14px;
+      }
+    }
+
+  }
+  
+  
+  .replyBox {
+    margin-top: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    border: solid #c7c7c7 1px;
+    border-radius: 5px;
+    
+    .cmtName {
+      width: 200px;
+      font-size: 14px;
+    }
+    .cmtText {
+      margin-top: 10px;
+      width: 100%;
+      display: block;
+    }    
+    
+    .cmtButton {
+      font-size: 14px;
+      margin-top: 10px;
+      width: 100px;
+
+    }
+    
+    .cancelButton{
+      font-size: 14px;
+      margin-left: 20px;
+      width: 100px;    
+    }
+  }
+  .replies {
+    margin-left: 20px;
+  }
+
+}
+

@@ -1,0 +1,61 @@
+.App {
+  height: 100%;
+  background-color: #d5d5d5;
+  padding: 20px;
+
+.innerApp {
+
+  width: 100%;
+  max-width: 960px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #fff;
+  
+  .headertext{
+    font-family : Roboto;
+    color: #000000;
+    font-size: 30px;
+    line-height: 1.4em;
+    font-weight: 400;
+    position: relative;
+    display: block;
+    margin: 0 0 15px;
+  }
+  
+  .imgBlog{
+  	width: 600px;
+  	height: auto;
+  }
+  
+  .blogText{
+    font-size: 18px;
+    color: #656565;
+    text-align: justify;
+  }
+  
+  .cmtBox {
+    padding: 10px;
+    margin-right: 20px;
+    border: solid #c7c7c7 1px;
+    border-radius: 5px;
+    
+    .cmtName {
+      width: 300px;
+      font-size: 14px;
+    }
+    .cmtText {
+      margin-top: 10px;
+      width: 100%;
+      display: block;
+    }    
+    
+    .cmtButton {
+      font-size: 16px;
+      margin-top: 10px;
+      width: 150px;
+
+    }
+  }
+    
+}
+}
