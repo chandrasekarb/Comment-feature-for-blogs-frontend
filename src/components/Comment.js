@@ -7,14 +7,14 @@ import moment from 'moment';
 class Comment extends Component {
   constructor(props) {
     super(props);
-    this.state = {name: "", message: "", replys: [], replybox: false};
+    this.state = {name: "", message: "", replies: [], replybox: false};
   }
   
   componentDidMount() {
-    axios.get('http://localhost:3002/replys?id='+this.props.log.id+'')
+    axios.get('http://localhost:3002/replies?id='+this.props.log.id+'')
     .then((response) => {
-      const result = response.data.replys;
-      this.setState({replys: result});
+      const result = response.data.replies;
+      this.setState({replies: result});
     })
     .catch(() => {
       alert('Failed to get value...');
@@ -28,9 +28,9 @@ class Comment extends Component {
     axios.post('http://localhost:3002/reply', input)
     .then((response) => {
       const reply = response.data;
-      let replys = this.state.replys;
-      replys.unshift(reply);
-      this.setState({ replys: replys, name: "", message: "", replybox: false });
+      let replies = this.state.replies;
+      replies.unshift(reply);
+      this.setState({ replies: replies, name: "", message: "", replybox: false });
     })
     .catch(() => {
       alert('Failed to post reply...');
@@ -55,7 +55,7 @@ class Comment extends Component {
   }
    
   render() {
-    const replys = this.state.replys;
+    const replies = this.state.replies;
     return (
 	<div className="comment-page">
 	<div className="comment">
@@ -92,7 +92,7 @@ class Comment extends Component {
 
 
 			<div className="replies">
-			{replys.map((reply) =>
+			{replies.map((reply) =>
 				<Comment id={this.props.id} log={reply} viewmode={'reply'} />
 			)}
 			</div>
