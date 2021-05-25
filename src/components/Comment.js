@@ -21,9 +21,9 @@ class Comment extends Component {
   }
 
   getValues(id) {
-    axios.get('http://localhost:3002/replys?id='+id+'')
+    axios.get('http://localhost:3002/replies?id='+id+'')
     .then((response) => {
-      const result = response.data.replys;
+      const result = response.data.replies;
       this.setState({replies: result});
     })
     .catch(() => {
