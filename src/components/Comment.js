@@ -11,9 +11,19 @@ class Comment extends Component {
   }
   
   componentDidMount() {
-    axios.get('http://localhost:3002/replies?id='+this.props.log.id+'')
+    this.getValues(this.props.log.id);
+  }
+
+  componentWillUpdate(nextProps){
+    if (nextProps.log.id !== this.props.log.id) {
+      this.getValues(nextProps.log.id);
+    } 
+  }
+
+  getValues(id) {
+    axios.get('http://localhost:3002/replys?id='+id+'')
     .then((response) => {
-      const result = response.data.replies;
+      const result = response.data.replys;
       this.setState({replies: result});
     })
     .catch(() => {
